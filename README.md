@@ -34,7 +34,13 @@ npm run test:e2e
 ```
 npm run test:unit
 ```
-
+### If build breaks
+```
+* npm cache clean --force
+* delete node_modules folder
+* delete package-lock.json file
+* npm install
+```
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
