@@ -16,7 +16,8 @@
         </v-carousel>
         </v-img>
         <v-text>
-           <h2 id="mainText"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde eius dignissimos consequuntur nobis sapiente, vel odio expedita dolor, ea cupiditate dolores nulla quam provident itaque similique ipsam est. Saepe, molestias!
+           <h2 id="mainText">
+               There are 100 civics questions on the naturalization test. During your naturalization interview, you will be asked up to 10 questions from the list of 100 questions. You must answer correctly six (6) of the 10 questions to pass the civics test.
                </h2>
         </v-text>
        <v-actions>
@@ -106,7 +107,6 @@ export default {
 </script>
 
 <style>
-html,body{margin:0;padding:0;}
 #mainMenu{
     display: flex;
     justify-content: center;
@@ -117,7 +117,7 @@ html,body{margin:0;padding:0;}
     margin-top: 30px;
 }
 #mainText{
-    margin: 7%;
+    margin: 20px;
 }
 
 

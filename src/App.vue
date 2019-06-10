@@ -2,8 +2,8 @@
   <v-app id="theApp">
     <v-toolbar app dark class="indigo">
       <v-toolbar-title class="headline text-uppercase">
-        <span>USCIS </span>
-        <span class="font-weight-light">CIVICS QUIZ</span>
+        <a href="/" id="homeLink"><span>USCIS </span>
+        <span class="font-weight-light" >CIVICS QUIZ</span></a>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
@@ -37,9 +37,17 @@ export default {
 
 
 <style>
+html{
+  overflow-y: auto;
+}
 #theApp{
   height: 100vh;
-  background-image: url('/img/background/hip-square.png')
+  background-image: url('/img/background/hip-square.png');
+  overflow-y:hidden;
+}
+#homeLink{
+  color: white;
+  text-decoration-line: none
 }
  
 </style>

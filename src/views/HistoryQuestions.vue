@@ -1,6 +1,6 @@
 <template>
   <div>
-    <show-question v-bind:imgSrc="imgSrc"></show-question>
+    <show-question></show-question>
   </div>
 </template>
 
@@ -10,11 +10,6 @@
   export default {
     components: {
       'show-question': Question
-    },
-    data (){
-      return {
-        imgSrc: "/img/allQ.jpg"
-      }
     }
   }
 </script>
