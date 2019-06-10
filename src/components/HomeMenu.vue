@@ -39,6 +39,7 @@
             </v-btn>
 
             <v-btn
+                href="/government"
                 color="indigo"
                 flat
                 value="americanGov"
@@ -48,6 +49,7 @@
             </v-btn>
 
             <v-btn
+                href="/history"
                 color="indigo"
                 flat
                 value="americsnHist"
@@ -57,6 +59,7 @@
             </v-btn>
 
             <v-btn
+                href="/integrated"
                 color="indigo"
                 flat
                 value="integratedCiv"

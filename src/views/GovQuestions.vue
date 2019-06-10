@@ -16,13 +16,13 @@
     },
     data (){
       return {
-        imgSrc: "/img/allQ.jpg",
+        imgSrc: "/img/americanGov.jpg",
         questions: []
       }
     },
     created() {
     this.$http
-        .get('http://localhost:8888/api/inquiries')
+        .get('http://localhost:8888/api/inquiries/government')
         .then(function(data){
             this.questions = data.body;
         });

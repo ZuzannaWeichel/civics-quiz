@@ -66,14 +66,17 @@ export default {
     
     props: {
         imgSrc: {
-        type: String,
-        required: true
+            type: String,
+            required: true
+        },
+        questions: {
+            type: Array,
+            required: true
         }
     }
     ,
     data () {
         return {
-            questions: [],
             counter: 0,
             answerIsShowing: false,
             bar: 0,
@@ -108,15 +111,7 @@ export default {
             this.incorrect++;
         },
  
-    },
-    created() {
-        this.$http
-            .get('http://localhost:8888/api/inquiries/history')
-            .then(function(data){
-                this.questions = data.body;
-            });
     }
-
 }
 </script>
 
