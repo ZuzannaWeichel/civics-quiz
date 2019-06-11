@@ -37,13 +37,11 @@ export default {
 
 
 <style>
-html{
-  overflow-y: auto;
-}
+
 #theApp{
-  height: 100vh;
+  overflow: hidden;
+  height: auto;
   background-image: url('/img/background/hip-square.png');
-  overflow-y:hidden;
 }
 #homeLink{
   color: white;
