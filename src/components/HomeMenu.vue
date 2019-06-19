@@ -1,5 +1,5 @@
 <template>
-    
+
     <div  id="mainMenu">
 
          <v-layout>
@@ -79,33 +79,30 @@
 </template>
 
 <script>
-import { finished } from 'stream';
-import { log } from 'util';
 export default {
-    data () {
-        return {
-            items: [
-                {
-                    src: '/img/americanGov.jpg'
-                },
-                {
-                    src: '/img/americanHist.jpg'
-                },
-                {
-                    src: '/img/integratedCiv.jpg'
-                },
-                {
-                    src: '/img/allQ.jpg'
-                }
-            ],
-            bottomNav: 'recent'
+  data () {
+    return {
+      items: [
+        {
+          src: '/img/americanGov.jpg'
+        },
+        {
+          src: '/img/americanHist.jpg'
+        },
+        {
+          src: '/img/integratedCiv.jpg'
+        },
+        {
+          src: '/img/allQ.jpg'
         }
-
-    },
-    methods: {
-
+      ],
+      bottomNav: 'recent'
     }
-    
+  },
+  methods: {
+
+  }
+
 }
 </script>
 
@@ -123,7 +120,4 @@ export default {
     margin: 20px;
 }
 
-
 </style>
-
-

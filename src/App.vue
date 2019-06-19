@@ -35,7 +35,6 @@ export default {
 }
 </script>
 
-
 <style>
 
 #theApp{
@@ -47,5 +46,5 @@ export default {
   color: white;
   text-decoration-line: none
 }
- 
+
 </style>
