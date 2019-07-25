@@ -22,7 +22,7 @@ export default {
   },
   created () {
     this.$http
-      .get('http://localhost:8888/api/inquiries/integrated')
+      .get('https://civics-quiz-api.herokuapp.com/api/inquiries/integrated')
       .then(function (data) {
         this.questions = data.body
       })
