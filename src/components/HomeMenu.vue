@@ -111,13 +111,17 @@ export default {
     display: flex;
     justify-content: center;
 }
+#mainCarousel{
+    height: 55vh !important;
+}
 #mainCard{
     height: 80vh;
     background-color: #e9e0d8;
     margin-top: 30px;
 }
 #mainText{
-    margin: 20px;
+    margin: 2vh;
+    font-size: 2.6vh
 }
 
 </style>
