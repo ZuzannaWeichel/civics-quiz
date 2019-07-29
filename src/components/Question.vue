@@ -24,7 +24,7 @@
 
           <v-card-title primary-title  class="title-height">
             <div v-show="!alertOn">
-              <h3 class="headline mb-0">{{questions[counter-1].question}}</h3>
+              <h3 id="qText" class="headline mb-0">{{questions[counter-1].question}}</h3>
             </div>
 
             <v-alert id="alert-bar"
@@ -62,7 +62,7 @@
         <v-card v-show="showAns" class="answer-card">
 
           <v-card-title primary-title>
-              <h4 class="headline mb-0"><ul v-html="formatAnswer(questions[counter-1].answer)"></ul></h4>
+              <h4 id="aText" class="headline mb-0"><ul v-html="formatAnswer(questions[counter-1].answer)"></ul></h4>
           </v-card-title>
 
           <v-card-actions class="toTheRight">
@@ -171,13 +171,18 @@ export default {
     margin-right: 1.8%;
 }
 .answer-card {
-    margin-bottom: 3%
+    margin-bottom: 3%;
+    font-size: calc(1vh + 1vw) ;
+
 }
 #alert-bar{
     height: 100%;
     width: 100%;
-    font-size: 2.5vh;
+    font-size: 2vh;
     font-weight: 400;
     text-align: center
+}
+.headline {
+  font-size: calc(1.5vh + 1.5vw) !important;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
 
-    <div  id="mainMenu">
+    <div id="mainMenu">
 
          <v-layout>
          <v-flex xs12 sm10 offset-sm1>
@@ -24,9 +24,8 @@
         <v-bottom-nav
             :active.sync="bottomNav"
             :value="true"
-            absolute
             fixed
-            color="transparent"
+            color= #e9e0d8
         >
             <v-btn
                 href="/all"
@@ -110,18 +109,24 @@ export default {
 #mainMenu{
     display: flex;
     justify-content: center;
+    height: auto;
 }
 #mainCarousel{
     height: 55vh !important;
 }
 #mainCard{
-    height: 80vh;
+    height: auto;
     background-color: #e9e0d8;
     margin-top: 3vh;
 }
 #mainText{
+    height: auto;
     margin: 2vh;
-    font-size: 2.5vh;
+    padding: 2vh;
+    font-size: calc(1.5vh + 1vw);
+}
+.theme--light.v-bottom-nav .v-btn:not(.v-btn--active) {
+    color: #3f51b5 !important
 }
 
 </style>
