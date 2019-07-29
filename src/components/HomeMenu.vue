@@ -117,11 +117,11 @@ export default {
 #mainCard{
     height: 80vh;
     background-color: #e9e0d8;
-    margin-top: 30px;
+    margin-top: 3vh;
 }
 #mainText{
     margin: 2vh;
-    font-size: 2.6vh
+    font-size: 2.5vh;
 }
 
 </style>

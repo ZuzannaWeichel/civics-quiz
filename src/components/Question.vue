@@ -3,9 +3,7 @@
     <v-layout>
       <v-flex xs12 sm6 offset-sm3>
         <v-card class="question-card">
-          
-          <v-progress-linear id="progress" 
-          v-model="bar"  color="indigo" height="20"
+          <v-progress-linear id="progress" v-model="bar" color="indigo" height="20"
           >{{counter}}/{{questions.length}}</v-progress-linear>
 
           <v-img
@@ -84,7 +82,7 @@ export default {
   props: {
     imgSrc: {
       type: String,
-      required: true,
+      required: true
     },
     questions: {
       type: Array,
@@ -178,7 +176,7 @@ export default {
 #alert-bar{
     height: 100%;
     width: 100%;
-    font-size: 24px;
+    font-size: 2.5vh;
     font-weight: 400;
     text-align: center
 }
