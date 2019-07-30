@@ -172,7 +172,7 @@ export default {
 }
 .answer-card {
     margin-bottom: 3%;
-    font-size: calc(1vh + 1vw) ;
+    font-size: calc(0.3vh + 0.5vw) ;
 
 }
 #alert-bar{
@@ -183,6 +183,6 @@ export default {
     text-align: center
 }
 .headline {
-  font-size: calc(1.5vh + 1.5vw) !important;
+  font-size: calc(1vh + 1vw) !important;
 }
 </style>

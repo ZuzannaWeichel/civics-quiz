@@ -123,7 +123,8 @@ export default {
     height: auto;
     margin: 2vh;
     padding: 2vh;
-    font-size: calc(1.5vh + 1vw);
+    font-size: calc(1vh + 1vw);
+    font-family: 'Roboto', sans-serif
 }
 .theme--light.v-bottom-nav .v-btn:not(.v-btn--active) {
     color: #3f51b5 !important
