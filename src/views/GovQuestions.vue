@@ -22,10 +22,28 @@ export default {
   },
   created () {
     this.$http
-      .get('https://civics-quiz-api.herokuapp.com/api/inquiries/government')
+      .get('https://civics-quiz-api-default-rtdb.firebaseio.com/.json')
       .then(function (data) {
-        this.questions = data.body
+        const questions = data.body.filter(question => question.category === 'American Government').sort((a, b) => 0.5 - Math.random())
+        if (this.subcategory === 'all') {
+          this.questions = questions
+        }
+        if (this.subcategory === 'principles') {
+          this.questions = questions.filter(question => question.subcategory === 'Principles of American Democracy')
+        }
+        if (this.subcategory === 'systems') {
+          this.questions = questions.filter(question => question.subcategory === 'System of Government')
+        }
+        if (this.subcategory === 'rights') {
+          this.questions = questions.filter(question => question.subcategory === 'Rights and Responsibilities')
+        }
       })
+  },
+  props: {
+    subcategory: {
+      type: String,
+      default: 'all'
+    }
   }
 }
 </script>

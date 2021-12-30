@@ -22,10 +22,24 @@ export default {
   },
   created () {
     this.$http
-      .get('https://civics-quiz-api.herokuapp.com/api/inquiries')
+      .get('https://civics-quiz-api-default-rtdb.firebaseio.com/.json')
       .then(function (data) {
-        this.questions = data.body
+        if (this.subcategory === 'order') {
+          this.questions = data.body
+        }
+        if (this.subcategory === 'random') {
+          this.questions = data.body.sort((a, b) => 0.5 - Math.random())
+        }
+        if (this.subcategory === 'ten') {
+          this.questions = data.body.sort((a, b) => 0.5 - Math.random()).slice(0, 10)
+        }
       })
+  },
+  props: {
+    subcategory: {
+      type: String,
+      default: 'order'
+    }
   }
 }
 </script>

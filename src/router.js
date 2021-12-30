@@ -8,6 +8,12 @@ import IntegratedQuestions from './views/IntegratedQuestions.vue'
 
 Vue.use(Router)
 
+function dynamicPropsFn (route) {
+  return {
+    subcategory: route.params.subcategory
+  }
+}
+
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
@@ -18,30 +24,29 @@ export default new Router({
       component: Home
     },
     {
-      path: '/all',
+      path: '/all/:subcategory',
       name: 'all-questions',
-      component: AllQuestions
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      // component: function () {
-      //   return import(/* webpackChunkName: "all-questions" */ './views/AllQuestions.vue')
-      // }
+      component: AllQuestions,
+      props: dynamicPropsFn
     },
     {
-      path: '/history',
+      path: '/history/:subcategory',
       name: 'history-questions',
-      component: HistoryQuestions
+      component: HistoryQuestions,
+      props: dynamicPropsFn
+
     },
     {
-      path: '/government',
+      path: '/government/:subcategory',
       name: 'gov-questions',
-      component: GovQuestions
+      component: GovQuestions,
+      props: dynamicPropsFn
     },
     {
-      path: '/integrated',
+      path: '/integrated/:subcategory',
       name: 'integrated-questions',
-      component: IntegratedQuestions
+      component: IntegratedQuestions,
+      props: dynamicPropsFn
     }
   ]
 })

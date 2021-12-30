@@ -52,8 +52,8 @@
               <v-btn id='redBtn' v-on:click="scoreAndShowAnswer" flat color="red">I don't know</v-btn>
           </v-card-actions>
 
-          <v-card-actions v-show="!alertOn">
-                <v-btn fab dark color="indigo" v-on:click="showAnswer" class="btn-margin">
+          <v-card-actions v-show="!alertOn" class="to-the-right">
+                <v-btn fab dark color="indigo" v-on:click="showAnswer">
                   <v-icon dark>explore</v-icon>
               </v-btn>
           </v-card-actions>
@@ -65,8 +65,8 @@
               <h4 id="aText" class="headline mb-0"><ul v-html="formatAnswer(questions[counter-1].answer)"></ul></h4>
           </v-card-title>
 
-          <v-card-actions class="toTheRight">
-              <v-btn fab dark color="indigo" v-on:click="increment" class="btn-margin">
+          <v-card-actions class="to-the-right">
+              <v-btn fab dark color="indigo" v-on:click="increment">
                   <v-icon dark>arrow_right_alt</v-icon>
               </v-btn>
           </v-card-actions>
@@ -150,6 +150,7 @@ export default {
 }
 .question-card{
     margin: 5% 0 5% 0;
+    padding: 20px;
 }
 .title-height{
     height: 15vh;
@@ -158,22 +159,19 @@ export default {
     display: flex;
     justify-content: space-evenly;
 }
-.toTheRight{
+.to-the-right{
     display: flex;
     justify-content: flex-end;
-}
-.btn-margin{
-    margin: 2%;
 }
 .score-chips {
     display: flex;
     justify-content: flex-end;
-    margin-right: 1.8%;
+    padding-top: 10px;
 }
 .answer-card {
     margin-bottom: 3%;
     font-size: calc(0.3vh + 0.5vw) ;
-
+    padding: 20px;
 }
 #alert-bar{
     height: 100%;
